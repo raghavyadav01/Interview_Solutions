@@ -1,0 +1,15 @@
+
+Question: Algorithm to count the number of set bits in a 32-bit integer?
+Answer: The above problem is solved using two methods
+        a) in loop check for individual bits and count the set bits.
+        b) Second method is without using loop. This method works as
+        This algorithm is based on Divide and Conquer Algorithm. Suppose there is a 8bit integer 213(11010101 in binary), the algorithm works like this(each time merge two neighbor blocks):
+
++-------------------------------+
+| 1 | 1 | 0 | 1 | 0 | 1 | 0 | 1 |  <- x
+|  1 0  |  0 1  |  0 1  |  0 1  |  <- first time merge
+|    0 0 1 1    |    0 0 1 0    |  <- second time merge
+|        0 0 0 0 0 1 0 1        |  <- third time ( answer = 00000101 = 5)
++-------------------------------+ 
+
+TODO : Add one more function to count the number of set bits using lookup table.
